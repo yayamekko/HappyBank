@@ -1,0 +1,15 @@
+
+<%= stylesheet_link_tag "happy_things/show/show", :media => "all" %>
+
+<% content_for :menubar do %>
+  <%= link_to 'HAPPY一覧へ', happy_things_path %>
+<% end %>
+
+<div class="contents">
+  <p>はっぴーを貯金しました！</p>
+  <p>
+    <%= @happy_thing.happy_things %>
+  </p>
+</div>
+
+

@@ -1,0 +1,31 @@
+<%= stylesheet_link_tag "new/new", :media => "all" %>
+
+<%= form_with(model: @happy_thing, local: true) do |form| %>
+  <!--DB登録エラーがある場合-->
+  <% if @happy_thing.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <!--エラーメッセージをリスト表示-->
+      <% @happy_thing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="contents">
+  <%= form_for(@user) do |form| %>
+    <p>ログインIDを入力してください</p>
+    <div class="field">
+        <%= form.text_field :user_id%>
+    </div>
+    <p>パスワードを入力してください</p>
+    <div class="field">
+        <%= form.text_field :user_password%>
+        <p>確認用</p>
+        <%= form.text_field :user_password_second%>
+    </div>
+    <%= form.submit "登録する" ,name: "entry_button"%>
+  <% end %>
+</div>

@@ -1,0 +1,31 @@
+
+<%= stylesheet_link_tag "happy_things/new/new", :media => "all" %>
+
+<% content_for :menubar do %>
+  <%= link_to '最近のHAPPYを見る', happy_things_path %>
+<% end %>
+<% content_for :pagetitle do %>HAPPY登録<% end %>
+
+<%= form_with(model: @happy_thing, local: true) do |form| %>
+  <!--DB登録エラーがある場合-->
+  <% if @happy_thing.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <!--エラーメッセージをリスト表示-->
+      <% @happy_thing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="contents">
+  <p>今日はどんないいことがありましたか？</p>
+  <%= form_with(model: @happy_thing, local: true) do |form| %>
+    <div class="field">
+        <%= form.text_area :happy_things, id: :happy_thing_happy_things, :size => "35x5", :maxlength => "50" %>
+    </div>
+    <%= submit_tag "貯金する!" ,name: "entry_button"%>
+  <% end %>
+</div>

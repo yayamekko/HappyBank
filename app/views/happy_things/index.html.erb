@@ -1,0 +1,34 @@
+
+<%= stylesheet_link_tag "happy_things/index/index", :media => "all" %>
+
+<% content_for :menubar do %>
+  <% link_to 'HAPPYを貯金する！', new_happy_thing_path %>
+<% end %>
+
+<div class="contents">
+  <table class="happyframe">
+    <thead>
+      <tr>
+        <th colspan="2">最近のHAPPY</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr>
+        <td class="happyframe">
+          <table class="happycontents">
+            <% @happy_things.each do |happy_thing| %>
+              <tr>
+                <td>
+                  <p class="happythings"><%= happy_thing.happy_things %></p>
+                  <p class="entrydate"><%= happy_thing.created_at %></p>
+                  <div class="border"></div>
+                </td>
+              </tr>
+            <% end %>
+          </table>
+        </td>
+       </tr>
+    </tbody>
+  </table>
+</div>

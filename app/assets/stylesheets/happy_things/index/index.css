@@ -1,0 +1,53 @@
+.contents{
+  width: 500px;
+}
+
+table.happyframe{
+  width: 400px;
+   /* 隣接するセルの境界線を間隔をあけて表示 */
+  border-collapse: separate;
+  /* 隣接するセルの線と線の間隔を0に */
+  border-spacing: 0;
+  margin: 0 auto;
+}
+
+table.happyframe th{
+  background: orange;
+  border: solid 3px orange;
+  border-radius: 10 10 0 0px;
+  font-size: 1.5em;
+  line-height: 2em;
+  
+}
+
+td.happyframe {
+  border-left: solid 3px orange;
+  border-right: solid 3px orange;
+  border-bottom: solid 3px orange;
+  border-radius: 0 0 10 10px;
+}
+
+table.happycontents td {
+  width: 500px;
+  height: 45px;
+}
+
+.happycontents{
+  margin: 20px;
+}
+
+.happythings{
+  font-size: 1.5em;
+  text-align: left;
+  margin: 0;
+}
+
+.entrydate{
+  font-size: 1em;
+  text-align: right;
+  margin: 0;
+}
+
+.border{
+  border-bottom: 1px dotted #cccccc;
+}

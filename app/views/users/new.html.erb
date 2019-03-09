@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag "users/new/new", :media => "all" %>
+
+<% content_for :pagetitle do %>ユーザー登録<% end %>
+
+<%= form_with(model: @user, local: true) do |form| %>
+  <!--DB登録エラーがある場合-->
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <!--エラーメッセージをリスト表示-->
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="contents">
+    <div class="field">
+     <%= form.label :user_id, "ユーザーID" %>
+     <%= form.text_field :user_id, id: :user_user_id, :size => "35x5", :maxlength => "10" %>
+    </div>
+
+    <div class="field">
+     <%= form.label :password_digest, "パスワード" %>
+     <%= form.password_field :password_digest, id: :user_password_digest, :size => "35x5", :maxlength => "10" %>
+    </div>
+  
+    <div class="field">
+     <%= form.label :password_confirmation, "パスワード(確認用)" %>
+     <%= form.password_field :password_confirmation, id: :user_password_confirmation, :size => "35x5", :maxlength => "10" %>
+    </div>
+
+    <div class="actions">
+     <%= form.submit %>
+    </div>
+  </div>
+<% end %>
+

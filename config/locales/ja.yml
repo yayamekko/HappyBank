@@ -1,0 +1,5 @@
+ja:
+  activerecord:
+    attributes:
+      happy_thing:
+        happy_things:  happy

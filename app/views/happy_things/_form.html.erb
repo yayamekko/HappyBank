@@ -1,0 +1,30 @@
+<%= form_with(model: happy_thing, local: true) do |form| %>
+  <!--DB登録エラーがある場合-->
+  <% if happy_thing.errors.any? %>
+    <div id="error_explanation">
+      <h3>入力してください</h3>
+      <!--<h2><%= pluralize(happy_thing.errors.count, "error") %> prohibited this happy_thing from being saved:</h2>-->
+      <ul>
+      <!--エラーメッセージをリスト表示-->
+      <% happy_thing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <!--<%= form.label :happy_things %>-->
+    <%= form.text_area :happy_things, id: :happy_thing_happy_things %>
+  </div>
+
+  <!--<div class="field">-->
+  <!--  <%= form.label :user_id %>-->
+  <!--  <%= form.number_field :user_id, id: :happy_thing_user_id %>-->
+  <!--</div>-->
+
+  <div class="actions">
+    <!--<%= form.submit %>-->
+    <%= submit_tag "貯金する!" ,name: "entry_button"%>
+  </div>
+<% end %>
