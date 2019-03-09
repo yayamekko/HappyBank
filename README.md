@@ -1,2 +1,2 @@
-# Ruby on Rails はっぴー貯金アプリ
+# Ruby on Rails HAYYP貯金アプリ
 
