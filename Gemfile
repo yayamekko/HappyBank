@@ -8,6 +8,9 @@ gem 'coffee-rails', '4.2.2'
 gem 'jquery-rails', '4.3.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
+#エラーメッセージを日本語に設定
+gem 'rails-i18n'
+gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

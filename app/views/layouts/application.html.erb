@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html>
+
+<%= stylesheet_link_tag "application", :media => "all" %>
+
   <head>
     <title>HappyBankApp</title>
     <%= csrf_meta_tags %>
@@ -9,6 +11,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="header">
+      <div class="bottonframe">
+        <%= yield :menubar %>
+      </div>
+      <h1 class="title">HAPPY BANK</h1>
+    </header>
+    <div class="wrap">
+      <h2 class="pagetitle"><%= yield :pagetitle %></h1>
+      <%= yield %>
+    </div>
   </body>
 </html>

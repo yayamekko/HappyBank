@@ -10,6 +10,64 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require_directory .
  *= require_self
  */
+
+.header {
+  margin-top: 40px;
+}
+
+.bottonframe {
+  width: 200px;
+  margin-left: auto;
+}
+
+.title {
+  background-color: orange;
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.pagetitle {
+  margin-top: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.wrap {
+  width: 800px;
+  height: 900px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.contents {
+  margin: 0 auto;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid orangered;
+  padding: 7px;
+  margin: auto;
+  margin-bottom: 30px;
+  background-color: white;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: orangered;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+  color: orangered;
+}
